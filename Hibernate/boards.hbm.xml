@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='UTF-8'?>  
+    <!DOCTYPE hibernate-mapping PUBLIC  
+     "-//Hibernate/Hibernate Mapping DTD 3.0//EN"  
+     "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">  
+        
+   <hibernate-mapping>  
+  <class name="com.hibernate.util.borads" table="boards">   
+  <id name="bid">  
+  <generator class="increment"></generator>  
+  </id>  
+  <property name="name"></property>  
+  
+    
+    
+    <joined-subclass name="com.hibernate.util.Federal_Phy_Books" table=“federalphybooks">  
+		<key column="bid"></key>  
+		<id name="fpid">  
+  		<generator class="increment"></generator>  
+  		</id>
+    	<property name="title"></property>
+  		<property name="path" type="string"></property>   
+    </joined-subclass>
+   
+   <joined-subclass name="com.hibernate.util.Federal_Chem_Books" table=“federalchembooks">  
+		<key column="bid"></key>  
+		<id name="fcid">  
+	  	<generator class="increment"></generator>  
+	  	</id>
+	    <property name="title"></property>
+	  	<property name="path" type="string"></property>   
+    </joined-subclass>
+    
+    
+     <joined-subclass name="com.hibernate.util.Sindh_Bio_Books" table=“sindhbiobooks">  
+		<key column="bid"></key>  
+		<id name="sbid">  
+	  	<generator class="increment"></generator>  
+	  	</id>
+	    <property name="title"></property>
+	  	<property name="path" type="type"></property>   
+    </joined-subclass>  
+    
+    <joined-subclass name="com.hibernate.util.Sindh_Phy_Books" table=“sindhphybooks">  
+		<key column="bid"></key>  
+		<id name="spid">  
+	  	<generator class="increment"></generator>  
+	  	</id>
+	    <property name="title"></property>
+	  	<property name="path" type="string"></property>   
+    </joined-subclass>
+   
+   <joined-subclass name="com.hibernate.util.Sindh_Chem_Books" table=“sindhchembooks">  
+		<key column="bid"></key>  
+		<id name="scid">  
+	  	<generator class="increment"></generator>  
+	  	</id>
+	    <property name="title"></property>
+	  	<property name="path" type="string"></property>   
+    </joined-subclass>
+    
+    
+     <joined-subclass name="com.hibernate.util.Punjab_Bio_Books" table=“punjabbiobooks">  
+		<key column="bid"></key>  
+		<id name="pbid">  
+	  	<generator class="increment"></generator>  
+	  	</id>
+	    <property name="title"></property>
+	  	<property name="path" type="string"></property>   
+    </joined-subclass>  
+    
+    <joined-subclass name="com.hibernate.util.Punjab_Phy_Books" table=“punjabphybooks">  
+		<key column="bid"></key>  
+		<id name="ppid">  
+	  	<generator class="increment"></generator>  
+	  	</id>
+	    <property name="title"></property>
+	  	<property name="path" type="string"></property>   
+    </joined-subclass>
+   
+   <joined-subclass name="com.hibernate.util.Punjab_Chem_Books" table=“punjabchembooks">  
+		<key column="bid"></key>  
+		<id name="pcid">  
+	  	<generator class="increment"></generator>  
+	  	</id>
+	    <property name="title"></property>
+	  	<property name="path" type="string"></property>   
+    </joined-subclass>
+ </class>  
+</hibernate-mapping>
+      
+      
+      
